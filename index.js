@@ -29,8 +29,8 @@ server.listen(port, () => {
 	console.log("listening on " + port);
 });
 
-server.use("/api/projects", projectsRoutes);
-server.use("/api/actions", actionsRoutes);
+server.use("/routes/projects", projectsRoutes);
+server.use("/routes/actions", actionsRoutes);
 
 server.get("*", (req, res) => {
 	res.status(200).json({ message: "Hey this is a GET request" });
